@@ -8,7 +8,7 @@ export default function Navbar() {
     console.log(menuOpen);
   };
   return (
-    <nav className="bg-yellow">
+    <nav className="bg-yellow fixed left-0 right-0">
       <div class="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
