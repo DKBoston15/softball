@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        xxs: "10rem",
+      },
       colors: {
         yellow: "#fbc42d",
       },

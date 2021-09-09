@@ -10,13 +10,13 @@ export default function Hero() {
           <img
             alt="Warrior Logo"
             src={logo}
-            className=" max-w-xs lg:max-w-xl"
+            className=" max-w-xxs lg:max-w-xl"
           />
         </div>
         <div className="flex flex-col items-center lg:items-left text-center lg:text-left justify-between py-10 space-y-12">
           <h1
             style={{ "font-family": "freshman" }}
-            className="tracking-wide text-6xl"
+            className="tracking-wide lg:text-6xl text-4xl"
           >
             D'Iberville Girls Youth Softball League
           </h1>
