@@ -30,7 +30,7 @@ export default function Register() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="p-20 flex justify-center max-w-full">
+    <div className="xl:p-20 flex justify-center max-w-full">
       <div className="w-full max-w-6xl">
         {!optionChosen && (
           <div>
@@ -40,9 +40,9 @@ export default function Register() {
         )}
         {/* Registration Form */}
         {registration && (
-          <div className="shadow-lg rounded-md p-8 bg-offWhite">
+          <div className="shadow-lg rounded-md p-8 mr-4 xl:mr-0 bg-offWhite">
             <h1
-              className="text-4xl tracking-widest mt-10"
+              className="text-2xl xl:text-4xl tracking-widest mt-16 xl:mt-10"
               style={{ "font-family": "freshman" }}
             >
               Registration Form
@@ -51,7 +51,7 @@ export default function Register() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="">
                 <h1 className="font-bold text-xl mb-4">Player Information</h1>
-                <div className="flex space-x-24">
+                <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-24">
                   <div className="flex flex-col">
                     <label for="name" className="mb-2">
                       Name
@@ -128,7 +128,7 @@ export default function Register() {
               <hr className="border-4 border-yellow my-10" />
               <div className="">
                 <h1 className="font-bold text-xl mb-4">Parent's Information</h1>
-                <div className="flex space-x-24">
+                <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-24">
                   <div className="flex flex-col">
                     <label for="parent-name" className="mb-2">
                       Parent/Guardian Name
@@ -160,7 +160,7 @@ export default function Register() {
                     />
                   </div>
                 </div>
-                <div className="flex space-x-24">
+                <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-24">
                   <div className="flex flex-col">
                     <label for="additional-contact-name" className="mb-2 mt-4">
                       Extra Contact Name
@@ -188,7 +188,7 @@ export default function Register() {
               <hr className="border-4 border-yellow my-10" />
               <div>
                 <h1 className="font-bold text-xl mb-4">Jersey Size</h1>
-                <div className="space-x-20 mb-4">
+                <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-20 xl:mb-4">
                   <label class="inline-flex items-center mt-3">
                     <input
                       type="radio"
@@ -278,7 +278,7 @@ export default function Register() {
                     <span class="ml-2 text-gray-700">XXL</span>
                   </label>
                 </div>
-                <div className="flex space-x-24">
+                <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-24 mt-10 xl:mt-0">
                   <div className="flex flex-col w-52">
                     <label for="jersey-1-choice" className="mb-2">
                       Jersey Number 1st Choice
@@ -320,7 +320,7 @@ export default function Register() {
                 <h1 className="font-bold text-xl mb-4">Spring Only</h1>
                 <div className="flex flex-col x-space-24">
                   <label for="belt-size">Belt Size</label>
-                  <div>
+                  <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0">
                     <label class="inline-flex items-center mt-3">
                       <input
                         type="radio"
@@ -332,7 +332,7 @@ export default function Register() {
                       />
                       <span class="ml-2 text-gray-700">One Size Fits Most</span>
                     </label>
-                    <label class="inline-flex items-center mt-3 ml-4">
+                    <label class="inline-flex items-center mt-3 xl:ml-4">
                       <input
                         type="radio"
                         class="form-radio h-5 w-5 text-gray-600"
@@ -356,7 +356,7 @@ export default function Register() {
                       {...register("Shoe Size", { required: true })}
                     />
                   </div>
-                  <div>
+                  <div className="flex flex-col xl:flex-row">
                     <label class="inline-flex items-center mt-3">
                       <input
                         type="radio"
@@ -368,7 +368,7 @@ export default function Register() {
                       />
                       <span class="ml-2 text-gray-700">Youth</span>
                     </label>
-                    <label class="inline-flex items-center mt-3 ml-4">
+                    <label class="inline-flex items-center mt-3 xl:ml-4">
                       <input
                         type="radio"
                         class="form-radio h-5 w-5 text-gray-600"
@@ -418,7 +418,7 @@ export default function Register() {
                 at d’Iberville Sports Facilities. In doing so, I am assuming all
                 of the inherent risks of the sport.
               </p>
-              <div className="mt-8 flex justify-between">
+              <div className="mt-8 flex flex-col xl:flex-row justify-between">
                 <div className="flex items-center">
                   <label for="terms_acceptance">I Accept These Terms</label>
                   <input
@@ -432,7 +432,7 @@ export default function Register() {
                 <input
                   type="submit"
                   value={">   Register"}
-                  className=" px-4 text-white bg-black pr-8 py-2 rounded"
+                  className=" px-4 text-white bg-black pr-8 py-2 rounded mt-4 xl:mt-0"
                 />
               </div>
               {/* errors will return when field validation fails  */}
