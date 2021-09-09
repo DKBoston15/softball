@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Contact_us() {
-  return <div>Contact Us</div>;
+  return <div className="p-20 flex justify-center min-w-full">Contact Us</div>;
 }
