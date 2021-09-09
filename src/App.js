@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import FAQ from "./pages/FAQ";
-import Contact_us from "./pages/Contact_us";
+// import About from "./pages/About";
+// import FAQ from "./pages/FAQ";
+// import Contact_us from "./pages/Contact_us";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
