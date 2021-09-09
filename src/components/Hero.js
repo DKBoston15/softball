@@ -7,7 +7,11 @@ export default function Hero() {
     <div className="p-20 flex justify-center min-w-full">
       <div className="flex flex-col lg:flex-row justify-between w-full max-w-6xl">
         <div className="lg:mr-24 flex justify-center items-center">
-          <img src={logo} className=" max-w-xs lg:max-w-xl" />
+          <img
+            alt="Warrior Logo"
+            src={logo}
+            className=" max-w-xs lg:max-w-xl"
+          />
         </div>
         <div className="flex flex-col items-center lg:items-left text-center lg:text-left justify-between py-10 space-y-12">
           <h1
