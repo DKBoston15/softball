@@ -23,7 +23,7 @@ export default function Navbar() {
           </div>
           {/* Desktop Nav */}
           <div className="flex items-center space-x-2 text-lg hidden md:flex">
-            <NavLink className="py-4 px-3" to="/about">
+            {/* <NavLink className="py-4 px-3" to="/about">
               About
             </NavLink>
             <NavLink className="py-4 px-3" to="/faq">
@@ -31,7 +31,7 @@ export default function Navbar() {
             </NavLink>
             <NavLink className="py-4 px-3" to="/contact-us">
               Contact Us
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className="px-4 text-white bg-black pr-8 py-2 rounded"
               to="/register"
@@ -67,7 +67,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div>
-          <NavLink
+          {/* <NavLink
             onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
             to="/about"
@@ -87,7 +87,7 @@ export default function Navbar() {
             to="/contact-us"
           >
             Contact Us
-          </NavLink>
+          </NavLink> */}
           <NavLink
             onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
