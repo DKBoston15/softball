@@ -6,6 +6,7 @@ import Contact_us from "./pages/Contact_us";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/register" component={Register} />
         <Route path="*" component={NotFound} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
