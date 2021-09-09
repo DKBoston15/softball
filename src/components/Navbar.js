@@ -68,24 +68,28 @@ export default function Navbar() {
       {menuOpen && (
         <div>
           <NavLink
+            onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
             to="/about"
           >
             About
           </NavLink>
           <NavLink
+            onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
             to="/faq"
           >
             FAQ
           </NavLink>
           <NavLink
+            onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
             to="/contact-us"
           >
             Contact Us
           </NavLink>
           <NavLink
+            onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
             to="/register"
           >
