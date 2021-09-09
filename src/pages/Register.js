@@ -30,7 +30,7 @@ export default function Register() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="xl:p-20 flex justify-center max-w-full">
+    <div className="p-20 flex justify-center max-w-full">
       <div className="w-full max-w-6xl">
         {!optionChosen && (
           <div>
@@ -42,7 +42,7 @@ export default function Register() {
         {registration && (
           <div className="shadow-lg rounded-md p-8 mr-4 xl:mr-0 bg-offWhite">
             <h1
-              className="text-2xl xl:text-4xl tracking-widest mt-16 xl:mt-10"
+              className="text-2xl xl:text-4xl tracking-widest mt-4 xl:mt-10"
               style={{ "font-family": "freshman" }}
             >
               Registration Form
