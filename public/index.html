@@ -12,6 +12,230 @@
     <title>React App</title>
   </head>
   <body>
+    <form
+      data-netlify="true"
+      name="registration"
+      method="post"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="registration" />
+
+      <input
+        id="name"
+        className="px-3 py-3 relative bg-white bg-white rounded text-sm shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+      />
+
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        type="date"
+        id="dob"
+        name="DOB"
+      />
+
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        id="age"
+      />
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5"
+          id="yes"
+          name="experience"
+          value="Yes"
+        />
+        <span class="ml-2 text-gray-700">Yes</span>
+      </label>
+      <label class="inline-flex items-center mt-3 ml-4">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-yellow-600"
+          id="no"
+          name="experience"
+          value="No"
+        />
+        <span class="ml-2 text-gray-700">No</span>
+      </label>
+      <textarea
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow max-w-3xl"
+        id="medical-conditions"
+      ></textarea>
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        id="parent-name"
+      />
+
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        id="email"
+      />
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        id="phone-number"
+      />
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        id="additional-contact-name"
+      />
+
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
+        id="additional-phone-number"
+      />
+
+      <label class="inline-flex items-center mt-0">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="youth"
+          name="jersey-type"
+          value="Youth"
+        />
+        <span class="ml-2 text-gray-700">Youth</span>
+      </label>
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="adult"
+          name="jersey-type"
+          value="Adult"
+        />
+        <span class="ml-2 text-gray-700">Adult</span>
+      </label>
+      <label class="inline-flex items-center mt-3 lg:mt-0">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="xs"
+          name="jersey-size"
+          value="XS"
+        />
+        <span class="ml-2 text-gray-700">XS</span>
+      </label>
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="s"
+          name="jersey-size"
+          value="S"
+        />
+        <span class="ml-2 text-gray-700">S</span>
+      </label>
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="m"
+          name="jersey-size"
+          value="M"
+        />
+        <span class="ml-2 text-gray-700">M</span>
+      </label>
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="lg"
+          name="jersey-size"
+          value="LG"
+        />
+        <span class="ml-2 text-gray-700">LG</span>
+      </label>
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="xl"
+          name="jersey-size"
+          value="XL"
+        />
+        <span class="ml-2 text-gray-700">XL</span>
+      </label>
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="xxl"
+          name="jersey-size"
+          value="XXL"
+        />
+        <span class="ml-2 text-gray-700">XXL</span>
+      </label>
+
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
+        id="jersery-1-choice"
+      />
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
+        id="jersery-2-choice"
+      />
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
+        id="jersery-3-choice"
+      />
+      <label class="inline-flex items-center">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="one-size-fits-most"
+          name="belt-size"
+          value="One Size Fits most"
+        />
+        <span class="ml-2 text-gray-700"> One Size Fits Most </span>
+      </label>
+      <label class="inline-flex items-center xl:ml-4">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="adult-xl"
+          name="belt-size"
+          value="Adult XL"
+        />
+        <span class="ml-2 text-gray-700">Adult XL</span>
+      </label>
+      <input
+        className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-24"
+        id="shoe-size"
+      />
+
+      <label class="inline-flex items-center mt-3">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="youth"
+          name="shoe-category"
+          value="Youth"
+        />
+        <span class="ml-2 text-gray-700">Youth</span>
+      </label>
+      <label class="inline-flex items-center mt-3 xl:ml-4">
+        <input
+          type="radio"
+          class="form-radio h-5 w-5 text-gray-600"
+          id="women"
+          name="shoe-category"
+          value="Women"
+        />
+        <span class="ml-2 text-gray-700">Women</span>
+      </label>
+      <label for="terms_acceptance">I Accept These Terms</label>
+      <input
+        type="checkbox"
+        id="terms_acceptance"
+        name="terms"
+        value="Terms of Registration"
+        class="form-checkbox h-5 w-5 ml-4"
+      />
+      <input
+        type="submit"
+        className=" px-4 text-white bg-black pr-8 py-2 rounded mt-4 xl:mt-0"
+      />
+    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

@@ -91,7 +91,9 @@ export default function Register() {
                 onSubmit={handleSubmit(onSubmit)}
                 data-netlify="true"
                 name="registration"
+                method="post"
               >
+                <input type="hidden" name="form-name" value="registration" />
                 <div className="">
                   <h1 className="font-bold text-xl mb-4">Player Information</h1>
                   <div className="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-24">
