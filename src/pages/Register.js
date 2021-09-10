@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
 
 export default function Register() {
-  const { EMAILJS_SERVICE_ID, EMAILJS_USER_ID, PAYPAL_CLIENT_ID } = process.env;
+  // const { EMAILJS_SERVICE_ID, EMAILJS_USER_ID, PAYPAL_CLIENT_ID } = process.env;
   const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
@@ -49,10 +49,10 @@ export default function Register() {
     console.log(templateParams);
     emailjs
       .sendForm(
-        EMAILJS_SERVICE_ID,
+        "service_1rxec8h",
         "template_2n5912c",
         "#registration",
-        EMAILJS_USER_ID
+        "user_mTmWvnNQd1mBMgl7m6UkZ"
       )
       .then(
         function (response) {
@@ -119,7 +119,8 @@ export default function Register() {
                   <br />
                   <PayPalScriptProvider
                     options={{
-                      "client-id": PAYPAL_CLIENT_ID,
+                      "client-id":
+                        "AezvWSOpGPcoH6FgbZaxPBhhvQohjaXJbJ-gY82scKsBNhNzxNXQiT-zpUBbC0m9p9_3nwSGEZTa9E2z",
                       "disable-funding": "credit",
                       "enable-funding": "venmo",
                     }}
