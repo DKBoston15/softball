@@ -49,7 +49,7 @@ export default function Register() {
     console.log(templateParams);
     emailjs
       .sendForm(
-        "service_1rxec8h",
+        "service_pmvm61d",
         "template_2n5912c",
         "#registration",
         "user_mTmWvnNQd1mBMgl7m6UkZ"
