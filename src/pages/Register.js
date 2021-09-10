@@ -188,7 +188,7 @@ export default function Register() {
                     </div>
                     <div className="flex flex-col">
                       <label for="age" className="mb-2">
-                        Age (As of Jan 1)
+                        Age (As of Jan 1, 2022)
                       </label>
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
