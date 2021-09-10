@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
 
 export default function Register() {
+  const { EMAILJS_SERVICE_ID, EMAILJS_USER_ID, PAYPAL_CLIENT_ID } = process.env;
   const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
@@ -48,10 +49,10 @@ export default function Register() {
     console.log(templateParams);
     emailjs
       .sendForm(
-        "service_1rxec8h",
+        EMAILJS_SERVICE_ID,
         "template_2n5912c",
         "#registration",
-        "user_mTmWvnNQd1mBMgl7m6UkZ"
+        EMAILJS_USER_ID
       )
       .then(
         function (response) {
@@ -117,23 +118,26 @@ export default function Register() {
                   </h1>
                   <br />
                   <PayPalScriptProvider
-                    createOrder={(data, actions) => {
-                      return actions.order.create({
-                        purchase_units: [
-                          {
-                            amount: {
-                              value: "20.00",
-                            },
-                          },
-                        ],
-                      });
-                    }}
                     options={{
-                      "client-id":
-                        "AezvWSOpGPcoH6FgbZaxPBhhvQohjaXJbJ-gY82scKsBNhNzxNXQiT-zpUBbC0m9p9_3nwSGEZTa9E2z",
+                      "client-id": PAYPAL_CLIENT_ID,
+                      "disable-funding": "credit",
+                      "enable-funding": "venmo",
                     }}
                   >
-                    <PayPalButtons style={{ layout: "vertical" }} />
+                    <PayPalButtons
+                      style={{ layout: "vertical" }}
+                      createOrder={(data, actions) => {
+                        return actions.order.create({
+                          purchase_units: [
+                            {
+                              amount: {
+                                value: "20.00",
+                              },
+                            },
+                          ],
+                        });
+                      }}
+                    />
                   </PayPalScriptProvider>
                 </div>
               </div>
