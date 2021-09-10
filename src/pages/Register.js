@@ -93,7 +93,6 @@ export default function Register() {
                 <span className="font-bold">
                   Registration is $20 per player.
                   <br />
-                  You can submit one payment for multiple players if desired.
                 </span>
               </div>
               <hr className="border-2 border-labelGray w-full mt-10" />
@@ -112,7 +111,7 @@ export default function Register() {
                 </button>
               </div>
               <div>
-                <div className="flex flex-col mt-20 mb-12">
+                <div className="flex flex-col mt-20 mb-36">
                   <h1 className="font-bold text-3xl mb-4">
                     Step 2 - Make A Payment
                   </h1>
