@@ -20,6 +20,25 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    console.log(data);
+    const templateParams = {
+      Name: data.Name,
+      DOB: data.DOB,
+      Age: data.Age,
+      Experience: data.Experience,
+      "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
+      "Parent/Guardian Name": data["Parent/Guardian Name"],
+      Email: data.Email,
+      "Phone Number": data["Phone Number"],
+      "Additional Contact Name": data["Additional Contact Name"],
+      "Additional Phone Number": data["Additional Phone Number"],
+      "Jersey Type": data["Jersey Type"],
+      "Jersey Size": data["Jersey Size"],
+      "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
+      "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
+      "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
+    };
+    console.log(templateParams);
     emailjs
       .sendForm(
         "service_1rxec8h",
@@ -249,7 +268,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="additional-phone-number"
-                        {...register("Phone Number")}
+                        {...register("Additional Phone Number")}
                       />
                     </div>
                   </div>
@@ -360,7 +379,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
                         id="jersery-1-choice"
-                        {...register("Jersey Number 1st Choice`", {
+                        {...register("Jersey Number 1st Choice", {
                           required: true,
                         })}
                       />
