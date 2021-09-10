@@ -9,16 +9,18 @@ import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        {/* <Route path="/about" component={About} />
+    <div className="flex">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {/* <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
         <Route path="/contact-us" component={Contact_us} /> */}
-        <Route path="/register" component={Register} />
-        <Route path="*" component={NotFound} />
-      </Switch>
-    </Router>
+          <Route path="/register" component={Register} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Router>
+    </div>
   );
 }

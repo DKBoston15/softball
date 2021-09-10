@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="p-20 flex justify-center min-w-full">
+    <div className="p-10 pt-20 lg:p-20 flex justify-center min-w-full text-custom">
       <div className="flex flex-col lg:flex-row justify-between w-full max-w-6xl">
         <div className="lg:mr-24 flex justify-center items-center">
           <img
@@ -20,11 +20,13 @@ export default function Hero() {
           >
             D'Iberville Girls Youth Softball League
           </h1>
+          <hr className="border-2 border-labelGray w-full" />
           <h4 className="text-lg">
             DGYSL is dedicated to provide each girl with a positive coaching
             experience and a great learning environment. We will build skills as
-            a team as well as encourage each player grow individually.
+            a team as well as encourage each player to grow individually.
           </h4>
+          <hr className="border-2 border-labelGray w-full" />
           <div className="flex justify-center lg:justify-start w-full">
             <NavLink
               className="px-4 text-black bg-yellow pr-8 py-4 rounded w-36"

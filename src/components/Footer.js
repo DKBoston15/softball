@@ -3,14 +3,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black left-0 right-0 text-white bottom-0 inset-x-0 mt-24 pb-10">
+    <footer className="bg-black left-0 right-0 text-white bottom-0 inset-x-0 pb-10">
       <div class="max-w-6xl mx-auto px-4">
         <div className="flex justify-between hidden lg:flex">
           <div className="flex flex-col justify-between pt-6">
-            <h1
-              className="text-4xl tracking-widest"
-              style={{ "font-family": "freshman" }}
-            >
+            <h1 className="text-4xl tracking-widest font-extrabold">
               <NavLink className="text-3xl" to="/">
                 DGYSL
               </NavLink>
@@ -49,10 +46,7 @@ export default function Footer() {
         {/* Mobile Footer */}
         <div className="flex flex-col justify-between lg:hidden">
           <div className="flex justify-between pt-6">
-            <h1
-              className="text-4xl tracking-widest"
-              style={{ "font-family": "freshman" }}
-            >
+            <h1 className="text-4xl tracking-widest">
               <NavLink className="text-3xl" to="/">
                 DGYSL
               </NavLink>
@@ -72,7 +66,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="pt-6">
-            <h5 className="pb-2 font-bold text-xl">Contact</h5>
+            <h5 className="pb-2 font-bold text-xl">Contact:</h5>
             <h3>DGYSL@yahoo.com</h3>
           </div>
           <div className="flex flex-col space-y-2 text-lg pt-8">

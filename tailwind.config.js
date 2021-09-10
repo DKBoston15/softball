@@ -10,8 +10,9 @@ module.exports = {
       },
       colors: {
         yellow: "#fbc42d",
-        labelGray: "#dfe4ea",
+        labelGray: "#ecf0f1",
         offWhite: "#f5f5f5",
+        custom: "#000",
       },
     },
   },

@@ -12,10 +12,7 @@ export default function Navbar() {
       <div class="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
-            <h1
-              className="text-4xl tracking-widest py-3"
-              style={{ "font-family": "freshman" }}
-            >
+            <h1 className="text-4xl tracking-widest py-3 font-extrabold">
               <NavLink className="text-3xl" to="/">
                 DGYSL
               </NavLink>
@@ -33,7 +30,7 @@ export default function Navbar() {
               Contact Us
             </NavLink> */}
             <NavLink
-              className="px-4 text-white bg-black pr-8 py-2 rounded"
+              className="px-4 text-white bg-custom pr-8 py-2 rounded"
               to="/register"
             >
               <span className="mr-4">{">"}</span>Register
