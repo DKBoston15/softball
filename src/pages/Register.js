@@ -216,9 +216,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="additional-contact-name"
-                        {...register("Additional Contact Name", {
-                          required: true,
-                        })}
+                        {...register("Additional Contact Name")}
                       />
                     </div>
                     <div className="flex flex-col">
@@ -231,7 +229,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="additional-phone-number"
-                        {...register("Phone Number", { required: true })}
+                        {...register("Phone Number")}
                       />
                     </div>
                   </div>
@@ -372,7 +370,7 @@ export default function Register() {
                       />
                     </div>
                   </div>
-                  <hr className="border-4 border-yellow my-10" />
+                  {/* <hr className="border-4 border-yellow my-10" />
                   <h1 className="font-bold text-xl mb-4">Spring Only</h1>
                   <div className="flex flex-col x-space-24">
                     <label for="belt-size" className="mb-4">
@@ -440,7 +438,7 @@ export default function Register() {
                         <span class="ml-2 text-gray-700">Women</span>
                       </label>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <hr className="border-4 border-yellow my-10" />
                 <h1 className="font-bold text-xl mb-4">Registration Terms</h1>
