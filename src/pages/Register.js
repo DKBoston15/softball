@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Footer from "../components/Footer";
+import emailjs from "emailjs-com";
 
 export default function Register() {
   const [optionChosen, setOptionChosen] = useState(false);
@@ -18,7 +19,23 @@ export default function Register() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    emailjs
+      .sendForm(
+        "service_1rxec8h",
+        "template_2n5912c",
+        "#registration",
+        "user_mTmWvnNQd1mBMgl7m6UkZ"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  };
 
   return (
     <div className="min-w-full min-h-[90vh] h-90vh">
@@ -92,6 +109,7 @@ export default function Register() {
                 data-netlify="true"
                 name="registration"
                 method="post"
+                id="registration"
               >
                 <input type="hidden" name="form-name" value="registration" />
                 <div className="">
