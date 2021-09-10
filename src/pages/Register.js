@@ -30,7 +30,7 @@ export default function Register() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="p-20 flex justify-center max-w-full">
+    <div className="pt-10 lg:pt-0 lg:p-20 flex justify-center max-w-full">
       <div className="w-full max-w-6xl">
         {!optionChosen && (
           <div>
