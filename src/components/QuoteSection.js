@@ -5,7 +5,11 @@ export default function QuoteSection() {
   return (
     <div className="flex justify-evenly p-4 lg:p-16 bg-labelGray text-xl">
       <div>
-        <img src={Bats} className="transform -rotate-12 hidden lg:flex" />
+        <img
+          src={Bats}
+          alt="Softball Bats"
+          className="transform -rotate-12 hidden lg:flex"
+        />
       </div>
       <div className="p-4" style={{ "max-width": "750px" }}>
         <svg

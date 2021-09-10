@@ -11,10 +11,6 @@ export default function Register() {
     setRegistration(true);
     setOptionChosen(true);
   }
-  function restart() {
-    setRegistration(false);
-    setOptionChosen(false);
-  }
 
   // Form Control
   const {
