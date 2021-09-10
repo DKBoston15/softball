@@ -3,14 +3,21 @@ import { useForm } from "react-hook-form";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Footer from "../components/Footer";
 import emailjs from "emailjs-com";
+import Alert from "../components/Alert";
 
 export default function Register() {
+  const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
 
   function openRegistration() {
     setRegistration(true);
     setOptionChosen(true);
+  }
+  function finishRegistration() {
+    setRegistration(false);
+    setOptionChosen(false);
+    setShowAlert(true);
   }
 
   // Form Control
@@ -49,6 +56,7 @@ export default function Register() {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
+          finishRegistration();
         },
         function (error) {
           console.log("FAILED...", error);
@@ -63,6 +71,11 @@ export default function Register() {
           {!optionChosen && (
             <div className="flex flex-col w-full text-center p-10 lg:p-0">
               <div className="text-xl">
+                <Alert
+                  color="green"
+                  showAlert={showAlert}
+                  setShowAlert={setShowAlert}
+                />
                 <h1 className="font-bold text-3xl mb-4 mt-10">
                   Welcome to Fall Registration
                 </h1>
@@ -92,19 +105,32 @@ export default function Register() {
                   className="px-4 text-black bg-yellow pr-8 py-4 rounded w-full"
                   style={{ "max-width": "750px" }}
                 >
-                  <span className="mr-4">{">"}</span>Register Player
+                  <div className="font-bold text-lg">
+                    <span className="mr-4">{">"}</span>Register Player
+                  </div>
                 </button>
               </div>
               <div>
-                <div className="flex flex-col mt-20">
+                <div className="flex flex-col mt-20 mb-12">
                   <h1 className="font-bold text-3xl mb-4">
                     Step 2 - Make A Payment
                   </h1>
                   <br />
                   <PayPalScriptProvider
+                    createOrder={(data, actions) => {
+                      return actions.order.create({
+                        purchase_units: [
+                          {
+                            amount: {
+                              value: "20.00",
+                            },
+                          },
+                        ],
+                      });
+                    }}
                     options={{
                       "client-id":
-                        "AVRuXtIQqrBYf2Jf08XFrItldF3jyqroFidaIUgvCLEMrhfDWldKzn5lWwnEmcWzq4iccdy3E72lWIwo",
+                        "AezvWSOpGPcoH6FgbZaxPBhhvQohjaXJbJ-gY82scKsBNhNzxNXQiT-zpUBbC0m9p9_3nwSGEZTa9E2z",
                     }}
                   >
                     <PayPalButtons style={{ layout: "vertical" }} />
@@ -530,7 +556,7 @@ export default function Register() {
                   <input
                     type="submit"
                     value={">   Register"}
-                    className=" px-4 text-white bg-black pr-8 py-2 rounded mt-4 xl:mt-0"
+                    className=" px-4 text-white bg-black pr-8 py-2 rounded mt-4 xl:mt-0 cursor-pointer"
                   />
                 </div>
                 {/* errors will return when field validation fails  */}
