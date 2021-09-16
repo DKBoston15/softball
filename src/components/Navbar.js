@@ -22,13 +22,13 @@ export default function Navbar() {
           <div className="flex items-center space-x-2 text-lg hidden md:flex">
             {/* <NavLink className="py-4 px-3" to="/about">
               About
-            </NavLink>
+            </NavLink> */}
             <NavLink className="py-4 px-3" to="/faq">
               FAQ
             </NavLink>
             <NavLink className="py-4 px-3" to="/contact-us">
               Contact Us
-            </NavLink> */}
+            </NavLink>
             <NavLink
               className="px-4 text-white bg-custom pr-8 py-2 rounded"
               to="/register"
@@ -70,7 +70,7 @@ export default function Navbar() {
             to="/about"
           >
             About
-          </NavLink>
+          </NavLink> */}
           <NavLink
             onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
@@ -84,7 +84,7 @@ export default function Navbar() {
             to="/contact-us"
           >
             Contact Us
-          </NavLink> */}
+          </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
