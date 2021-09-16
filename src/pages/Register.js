@@ -28,23 +28,23 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    const templateParams = {
-      Name: data.Name,
-      DOB: data.DOB,
-      Age: data.Age,
-      Experience: data.Experience,
-      "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
-      "Parent/Guardian Name": data["Parent/Guardian Name"],
-      Email: data.Email,
-      "Phone Number": data["Phone Number"],
-      "Additional Contact Name": data["Additional Contact Name"],
-      "Additional Phone Number": data["Additional Phone Number"],
-      "Jersey Type": data["Jersey Type"],
-      "Jersey Size": data["Jersey Size"],
-      "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
-      "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
-      "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
-    };
+    // const templateParams = {
+    //   Name: data.Name,
+    //   DOB: data.DOB,
+    //   Age: data.Age,
+    //   Experience: data.Experience,
+    //   "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
+    //   "Parent/Guardian Name": data["Parent/Guardian Name"],
+    //   Email: data.Email,
+    //   "Phone Number": data["Phone Number"],
+    //   "Additional Contact Name": data["Additional Contact Name"],
+    //   "Additional Phone Number": data["Additional Phone Number"],
+    //   "Jersey Type": data["Jersey Type"],
+    //   "Jersey Size": data["Jersey Size"],
+    //   "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
+    //   "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
+    //   "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
+    // };
     emailjs
       .sendForm(
         "service_pmvm61d",
