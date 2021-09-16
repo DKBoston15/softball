@@ -28,7 +28,6 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     const templateParams = {
       Name: data.Name,
       DOB: data.DOB,
@@ -46,7 +45,6 @@ export default function Register() {
       "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
       "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
     };
-    console.log(templateParams);
     emailjs
       .sendForm(
         "service_pmvm61d",
@@ -61,6 +59,25 @@ export default function Register() {
         },
         function (error) {
           console.log("FAILED...", error);
+        }
+      );
+    const confirmationParams = {
+      name: data.Name,
+      email: data.Email,
+    };
+    emailjs
+      .send(
+        "service_pmvm61d",
+        "template_zl7uesp",
+        confirmationParams,
+        "user_mTmWvnNQd1mBMgl7m6UkZ"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
         }
       );
   };
