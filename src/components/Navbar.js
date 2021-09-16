@@ -26,9 +26,9 @@ export default function Navbar() {
             <NavLink className="py-4 px-3" to="/faq">
               FAQ
             </NavLink>
-            <NavLink className="py-4 px-3" to="/contact-us">
+            {/* <NavLink className="py-4 px-3" to="/contact-us">
               Contact Us
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className="px-4 text-white bg-custom pr-8 py-2 rounded"
               to="/register"
@@ -78,13 +78,13 @@ export default function Navbar() {
           >
             FAQ
           </NavLink>
-          <NavLink
+          {/* <NavLink
             onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
             to="/contact-us"
           >
             Contact Us
-          </NavLink>
+          </NavLink> */}
           <NavLink
             onClick={() => setMenuOpen(false)}
             className="block py-2 px-4 text-sm hover:bg-gray-200"
