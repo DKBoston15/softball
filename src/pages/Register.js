@@ -113,11 +113,16 @@ export default function Register() {
                 </span>
               </div>
               <hr className="border-2 border-labelGray w-full mt-10" />
-              <div>
+              <div className="flex items-center flex-col">
                 <h1 className="font-bold text-3xl mb-4 mt-10">
                   Step 1 - Registration
                 </h1>
-                <button
+                <div className="px-4 text-black bg-yellow pr-8 py-4 rounded w-1/2 ">
+                  <b className="text-xl">Registration has closed.</b>
+                  <br /> Please reach out to one of the coaches or board members
+                  to learn more about when registration will open again.
+                </div>
+                {/* <button
                   onClick={() => openRegistration()}
                   className="px-4 text-black bg-yellow pr-8 py-4 rounded w-full"
                   style={{ "max-width": "750px" }}
@@ -125,7 +130,7 @@ export default function Register() {
                   <div className="font-bold text-lg">
                     <span className="mr-4">{">"}</span>Register Player
                   </div>
-                </button>
+                </button> */}
               </div>
               <div>
                 <div className="flex flex-col mt-20 mb-36">
