@@ -11,10 +11,10 @@ export default function Register() {
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
 
-  function openRegistration() {
-    setRegistration(true);
-    setOptionChosen(true);
-  }
+  // function openRegistration() {
+  //   setRegistration(true);
+  //   setOptionChosen(true);
+  // }
   function finishRegistration() {
     setRegistration(false);
     setOptionChosen(false);
