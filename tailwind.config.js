@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        "softball-wide": "url('/src/images/softball-wide.png')",
+      },
       maxWidth: {
         xxs: "10rem",
       },
