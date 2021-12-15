@@ -104,9 +104,14 @@ export default function Register() {
                   January 15th, the cost will rise to{" "}
                   <span className="font-semibold">$45</span>.
                   <br />
+                  <br />
                   Try-outs will be on our home fields on February 19th for any
                   player moving up an age bracket or joining DGYSL for their 1st
                   season.
+                </div>
+                <div className="mb-10">
+                  If you would like to register in person, you can do so on
+                  January 15th from 12pm-2pm. Location TBD.
                 </div>
                 <div className="mb-10">
                   To register your player please complete the registration form
