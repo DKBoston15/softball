@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="p-10 pt-20 lg:p-20 flex justify-center min-w-full text-custom">
+    <div className="p-10 pt-40 lg:p-30 flex justify-center min-w-full text-custom">
       <div className="flex flex-col lg:flex-row justify-between w-full max-w-6xl">
         <div className="lg:mr-24 flex justify-center items-center">
           <img

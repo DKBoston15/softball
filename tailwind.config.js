@@ -13,6 +13,8 @@ module.exports = {
         labelGray: "#ecf0f1",
         offWhite: "#f5f5f5",
         custom: "#000",
+        tomato: "#fc5548",
+        cadetblue: "#187A8C",
       },
     },
   },
