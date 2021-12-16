@@ -15,10 +15,10 @@ export default function Hero() {
         </div>
         <div className="flex flex-col items-center lg:items-left text-center lg:text-left justify-between py-10 space-y-12">
           <h1
-            style={{ "font-family": "freshman" }}
-            className="tracking-wide lg:text-6xl text-4xl"
+            style={{ "font-family": "bronzier" }}
+            className="tracking-wide lg:text-6xl text-4xl font-bold"
           >
-            D'Iberville Girls Youth Softball League
+            d'Iberville Girls Youth Softball League
           </h1>
           <hr className="border-2 border-labelGray w-full" />
           <h4 className="text-lg">

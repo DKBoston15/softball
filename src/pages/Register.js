@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
 
 export default function Register() {
-  const { EMAILJS_SERVICE_ID, EMAILJS_USER_ID, PAYPAL_CLIENT_ID } = process.env;
+  // const { EMAILJS_SERVICE_ID, EMAILJS_USER_ID, PAYPAL_CLIENT_ID } = process.env;
   const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
@@ -65,6 +65,7 @@ export default function Register() {
       name: data.Name,
       email: data.Email,
     };
+    console.log("SENDING");
     emailjs
       .send(
         "service_pmvm61d",
