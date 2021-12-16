@@ -188,11 +188,10 @@ export default function Register() {
               </h1>
               <br />
               <form
-                onSubmit={handleSubmit(onSubmit)}
+                // onSubmit={handleSubmit(onSubmit)}
                 data-netlify="true"
                 name="registration"
                 method="post"
-                id="registration"
               >
                 <input type="hidden" name="form-name" value="registration" />
                 <div className="">
