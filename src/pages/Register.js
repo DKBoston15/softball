@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Footer from "../components/Footer";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
 
 export default function Register() {
@@ -14,16 +14,16 @@ export default function Register() {
     setRegistration(true);
     setOptionChosen(true);
   }
-  function finishRegistration() {
-    setRegistration(false);
-    setOptionChosen(false);
-    setShowAlert(true);
-  }
+  // function finishRegistration() {
+  //   setRegistration(false);
+  //   setOptionChosen(false);
+  //   setShowAlert(true);
+  // }
 
   // Form Control
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { errors },
   } = useForm();
   // const onSubmit = (data) => {
