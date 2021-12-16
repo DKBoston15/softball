@@ -199,16 +199,6 @@ export default function Register() {
               >
                 Registration Form
               </h1>
-              <button
-                onClick={() =>
-                  onSubmit({
-                    Name: "Dakota Test",
-                    Email: "dakotabrownag@gmail.com",
-                  })
-                }
-              >
-                Test Register
-              </button>
               <br />
               <form
                 onSubmit={handleSubmit(onSubmit)}
