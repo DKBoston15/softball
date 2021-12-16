@@ -189,11 +189,7 @@ export default function Register() {
               <br />
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                data-netlify="true"
                 name="registration"
-                method="post"
-                netlify-honeypot="bot-field"
-                action="/"
                 id="registration"
               >
                 <input type="hidden" name="form-name" value="registration" />

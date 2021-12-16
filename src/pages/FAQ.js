@@ -6,7 +6,7 @@ export default function FAQ() {
   return (
     <div className="min-w-full min-h-[90vh] h-90vh">
       <div className="p-32 flex justify-center min-w-full flex-col items-center">
-        <h1 className="font-bold text-5xl mb-12 mt-10 text-center">
+        <h1 className="font-bold text-5xl mb-8 mt-10 text-center">
           Frequently Asked Questions
         </h1>
         <hr className="border-4 border-yellow my-10 w-full  max-w-6xl" />
