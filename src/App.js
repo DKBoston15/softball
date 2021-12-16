@@ -5,6 +5,7 @@ import FAQ from "./pages/FAQ";
 // import Contact_us from "./pages/Contact_us";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import Sponsors from "./pages/Sponsors";
 import Navbar from "./components/Navbar";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/faq" component={FAQ} />
           {/* <Route path="/contact-us" component={Contact_us} /> */}
           <Route path="/register" component={Register} />
+          <Route path="/sponsors" component={Sponsors} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>

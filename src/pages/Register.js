@@ -11,10 +11,10 @@ export default function Register() {
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
 
-  // function openRegistration() {
-  //   setRegistration(true);
-  //   setOptionChosen(true);
-  // }
+  function openRegistration() {
+    setRegistration(true);
+    setOptionChosen(true);
+  }
   function finishRegistration() {
     setRegistration(false);
     setOptionChosen(false);
@@ -28,23 +28,23 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    // const templateParams = {
-    //   Name: data.Name,
-    //   DOB: data.DOB,
-    //   Age: data.Age,
-    //   Experience: data.Experience,
-    //   "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
-    //   "Parent/Guardian Name": data["Parent/Guardian Name"],
-    //   Email: data.Email,
-    //   "Phone Number": data["Phone Number"],
-    //   "Additional Contact Name": data["Additional Contact Name"],
-    //   "Additional Phone Number": data["Additional Phone Number"],
-    //   "Jersey Type": data["Jersey Type"],
-    //   "Jersey Size": data["Jersey Size"],
-    //   "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
-    //   "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
-    //   "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
-    // };
+    const templateParams = {
+      Name: data.Name,
+      DOB: data.DOB,
+      Age: data.Age,
+      Experience: data.Experience,
+      "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
+      "Parent/Guardian Name": data["Parent/Guardian Name"],
+      Email: data.Email,
+      "Phone Number": data["Phone Number"],
+      "Additional Contact Name": data["Additional Contact Name"],
+      "Additional Phone Number": data["Additional Phone Number"],
+      "Jersey Type": data["Jersey Type"],
+      "Jersey Size": data["Jersey Size"],
+      "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
+      "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
+      "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
+    };
     emailjs
       .sendForm(
         "service_pmvm61d",
@@ -65,6 +65,7 @@ export default function Register() {
       name: data.Name,
       email: data.Email,
     };
+    console.log("SENDING");
     emailjs
       .send(
         "service_pmvm61d",
@@ -84,7 +85,7 @@ export default function Register() {
 
   return (
     <div className="min-w-full min-h-[90vh] h-90vh">
-      <div className="pt-16 lg:p-20 flex justify-center max-w-full">
+      <div className="pt-28 lg:p-32 flex justify-center max-w-full">
         <div className="w-full max-w-6xl">
           {!optionChosen && (
             <div className="flex flex-col w-full text-center p-10 lg:p-0">
@@ -95,9 +96,24 @@ export default function Register() {
                   setShowAlert={setShowAlert}
                 />
                 <h1 className="font-bold text-3xl mb-4 mt-10">
-                  Welcome to Fall Registration
+                  Welcome to Spring Ball
                 </h1>
                 <br />
+                <div className="mb-10">
+                  Register now to secure a discounted cost of{" "}
+                  <span className="font-semibold">$40 per player</span>. After
+                  January 15th, the cost will rise to{" "}
+                  <span className="font-semibold">$45</span>.
+                  <br />
+                  <br />
+                  Try-outs will be on our home fields on February 19th for any
+                  player moving up an age bracket or joining DGYSL for their 1st
+                  season.
+                </div>
+                <div className="mb-10">
+                  If you would like to register in person, you can do so on
+                  January 15th from 12pm-2pm. Location TBD.
+                </div>
                 <div className="mb-10">
                   To register your player please complete the registration form
                   below. <br />
@@ -107,22 +123,18 @@ export default function Register() {
                   Once you have submitted your registration please complete your
                   payment.
                 </div>
-                <span className="font-bold">
-                  Registration is $20 per player.
-                  <br />
-                </span>
               </div>
               <hr className="border-2 border-labelGray w-full mt-10" />
               <div className="flex items-center flex-col">
                 <h1 className="font-bold text-3xl mb-4 mt-10">
                   Step 1 - Registration
                 </h1>
-                <div className="px-4 text-black bg-yellow pr-8 py-4 rounded w-1/2 ">
+                {/* <div className="px-4 text-black bg-yellow pr-8 py-4 rounded w-1/2 ">
                   <b className="text-xl">Registration has closed.</b>
                   <br /> Please reach out to one of the coaches or board members
                   to learn more about when registration will open again.
-                </div>
-                {/* <button
+                </div> */}
+                <button
                   onClick={() => openRegistration()}
                   className="px-4 text-black bg-yellow pr-8 py-4 rounded w-full"
                   style={{ "max-width": "750px" }}
@@ -130,7 +142,7 @@ export default function Register() {
                   <div className="font-bold text-lg">
                     <span className="mr-4">{">"}</span>Register Player
                   </div>
-                </button> */}
+                </button>
               </div>
               <div>
                 <div className="flex flex-col mt-20 mb-36">
@@ -153,7 +165,7 @@ export default function Register() {
                           purchase_units: [
                             {
                               amount: {
-                                value: "20.00",
+                                value: "40.00",
                               },
                             },
                           ],
@@ -461,7 +473,7 @@ export default function Register() {
                       />
                     </div>
                   </div>
-                  {/* <hr className="border-4 border-yellow my-10" />
+                  <hr className="border-4 border-yellow my-10" />
                   <h1 className="font-bold text-xl mb-4">Spring Only</h1>
                   <div className="flex flex-col x-space-24">
                     <label for="belt-size" className="mb-4">
@@ -529,7 +541,7 @@ export default function Register() {
                         <span class="ml-2 text-gray-700">Women</span>
                       </label>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
                 <hr className="border-4 border-yellow my-10" />
                 <h1 className="font-bold text-xl mb-4">Registration Terms</h1>

@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        "softball-wide": "url('/src/images/softball-wide.png')",
+      },
       maxWidth: {
         xxs: "10rem",
       },
@@ -13,6 +16,9 @@ module.exports = {
         labelGray: "#ecf0f1",
         offWhite: "#f5f5f5",
         custom: "#000",
+        tomato: "#fc5548",
+        cadetblue: "#187A8C",
+        linkBlue: "#0645AD",
       },
     },
   },

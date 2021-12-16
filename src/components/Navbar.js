@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Banner from "../components/Banner";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,6 +10,7 @@ export default function Navbar() {
   };
   return (
     <nav className="bg-yellow fixed left-0 right-0 z-40">
+      <Banner />
       <div class="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
