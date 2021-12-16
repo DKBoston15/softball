@@ -5,11 +5,11 @@ import { NavLink } from "react-router-dom";
 export default function FAQ() {
   return (
     <div className="min-w-full min-h-[90vh] h-90vh">
-      <div className="p-32 flex justify-center min-w-full flex-col items-center">
+      <div className="p-12 pt-32 flex justify-center min-w-full w-full flex-col items-center">
         <h1 className="font-bold text-5xl mb-8 mt-10 text-center">
           Frequently Asked Questions
         </h1>
-        <hr className="border-4 border-yellow my-10 w-full  max-w-6xl" />
+        <hr className="border-4 border-yellow my-10 w-full max-w-6xl" />
         <div class="flex flex-col lg:flex-row lg:flex-wrap -mx-5 overflow-hidden max-w-6xl lg:items-center">
           <div class="my-5 px-5 lg:w-1/2 overflow-hidden">
             <div className="font-bold text-xl mb-2">Where are we located?</div>
