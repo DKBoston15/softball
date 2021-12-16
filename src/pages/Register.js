@@ -201,8 +201,8 @@ export default function Register() {
                 data-netlify="true"
                 name="registration"
                 method="post"
-                data-netlify-honeypot="bot-field"
-                action="/register"
+                netlify-honeypot="bot-field"
+                action="/"
                 id="registration"
               >
                 <input type="hidden" name="form-name" value="registration" />
