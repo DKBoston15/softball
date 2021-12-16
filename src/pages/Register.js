@@ -27,6 +27,15 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    let myForm = document.getElementById("registration");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
     // const templateParams = {
     //   Name: data.Name,
     //   DOB: data.DOB,
@@ -193,7 +202,8 @@ export default function Register() {
                 name="registration"
                 method="post"
                 data-netlify-honeypot="bot-field"
-                action="POST"
+                action="/"
+                id="registration"
               >
                 <input type="hidden" name="form-name" value="registration" />
                 <div className="">
