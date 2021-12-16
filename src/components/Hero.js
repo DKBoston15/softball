@@ -29,7 +29,7 @@ export default function Hero() {
           <hr className="border-2 border-labelGray w-full" />
           <div className="flex justify-center lg:justify-start w-full">
             <NavLink
-              className="px-4 text-black bg-yellow pr-8 py-4 rounded w-36"
+              className="px-4 text-black bg-yellow pr-8 py-4 rounded w-36 transform hover:scale-105"
               to="/register"
             >
               <span className="mr-4">{">"}</span>Register

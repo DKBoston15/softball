@@ -32,11 +32,11 @@ export default function Footer() {
           </div>
           <div className="flex flex-col space-x-2 text-lg pt-6">
             <h5 className="pl-2 pb-2">Explore</h5>
-            {/* <NavLink to="/about">About</NavLink>
+            <NavLink to="/sponsors">Sponsors</NavLink>
             <NavLink to="/faq">FAQ</NavLink>
-            <NavLink to="/contact-us">Contact Us</NavLink> */}
+            {/* <NavLink to="/contact-us">Contact Us</NavLink> */}
             <NavLink
-              className="px-4 text-black bg-yellow pr-8 py-2 rounded mt-4"
+              className="px-4 text-black bg-yellow pr-8 py-2 rounded mt-4 transform hover:scale-105"
               to="/register"
             >
               <span className="mr-4">{">"}</span>Register
@@ -71,9 +71,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-col space-y-2 text-lg pt-8">
             <h5 className="pb-2 font-bold text-xl">Explore</h5>
-            {/* <NavLink to="/about">About</NavLink>
+            <NavLink to="/sponsors">Sponsors</NavLink>
             <NavLink to="/faq">FAQ</NavLink>
-            <NavLink to="/contact-us">Contact Us</NavLink> */}
+            {/* <NavLink to="/contact-us">Contact Us</NavLink> */}
             <NavLink to="/register">Register</NavLink>
           </div>
         </div>

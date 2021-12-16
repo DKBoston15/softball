@@ -54,11 +54,14 @@ export default function QuoteSection() {
 
           <div className="text-center mt-4 lg:mt-8 lg:ml-20 ">
             <span className="lg:hidden">"</span>
-            This season will mark a turning point for the d'Ibervile Girls Youth
-            Softball League. We are dedicated to providing the best softball
-            experience possible. Please be patient as we embark on a new chapter
-            for DGYSL. A new board, a new outlook, and a true desire to make
-            this the best league possible.<span className="lg:hidden">"</span>
+            DGYSL is a 100% non-profit organization ran by volunteers with the
+            assistance of our local city officials in d'Iberville. We strive to
+            always be an example that our players, parents, and our community
+            can be proud of. The safety of all our children us the utmost
+            priority for us at DGYSL. We are eagerly waiting to get started with
+            Spring Seasons 2022. Feel free to contact us via email at
+            dgysl@yahoo.com with any questions or concerns that you may have.
+            Now let's Go Lady Warriors! <span className="lg:hidden">"</span>
           </div>
 
           <div className="font-bold italic mt-4 lg:mt-8 text-center lg:text-right mb-4">
