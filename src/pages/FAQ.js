@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { NavLink } from "react-router-dom";
 
 export default function FAQ() {
   return (
@@ -34,9 +35,9 @@ export default function FAQ() {
               Can I pay for more than one child?
             </div>
             <div>
-              If paying online, currently you would need to make two separate
-              $20 payments. If paying in person, you can pay for both players at
-              once.
+              If paying online, you can pay for more than one player with
+              separate payments. If paying in person, you can pay for both
+              players at once.
             </div>
           </div>
 
@@ -47,6 +48,19 @@ export default function FAQ() {
             <div>
               We prefer online payments. We have a link to PayPal, VENMO, and
               will accept cash and checks when signing up in-person.
+            </div>
+          </div>
+
+          <div class="my-5 px-5 lg:w-1/2 overflow-hidden">
+            <div className="font-bold text-xl mb-2">
+              How can I sponsor a team or my child?
+            </div>
+            <div>
+              Thank you for your interest in supporting our players!
+              <NavLink className="text-linkBlue font-semibold" to="/sponsors">
+                <br />
+                Check out our sponsor page here for more information.
+              </NavLink>
             </div>
           </div>
 

@@ -18,6 +18,7 @@ module.exports = {
         custom: "#000",
         tomato: "#fc5548",
         cadetblue: "#187A8C",
+        linkBlue: "#0645AD",
       },
     },
   },
