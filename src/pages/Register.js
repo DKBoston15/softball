@@ -26,62 +26,62 @@ export default function Register() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    // const templateParams = {
-    //   Name: data.Name,
-    //   DOB: data.DOB,
-    //   Age: data.Age,
-    //   Experience: data.Experience,
-    //   "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
-    //   "Parent/Guardian Name": data["Parent/Guardian Name"],
-    //   Email: data.Email,
-    //   "Phone Number": data["Phone Number"],
-    //   "Additional Contact Name": data["Additional Contact Name"],
-    //   "Additional Phone Number": data["Additional Phone Number"],
-    //   "Jersey Type": data["Jersey Type"],
-    //   "Jersey Size": data["Jersey Size"],
-    //   "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
-    //   "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
-    //   "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
-    // };
+  // const onSubmit = (data) => {
+  //   // const templateParams = {
+  //   //   Name: data.Name,
+  //   //   DOB: data.DOB,
+  //   //   Age: data.Age,
+  //   //   Experience: data.Experience,
+  //   //   "Allergies/Medical Conditions": data["Allergies/Medical Conditions"],
+  //   //   "Parent/Guardian Name": data["Parent/Guardian Name"],
+  //   //   Email: data.Email,
+  //   //   "Phone Number": data["Phone Number"],
+  //   //   "Additional Contact Name": data["Additional Contact Name"],
+  //   //   "Additional Phone Number": data["Additional Phone Number"],
+  //   //   "Jersey Type": data["Jersey Type"],
+  //   //   "Jersey Size": data["Jersey Size"],
+  //   //   "Jersey Number 1st Choice": data["Jersey Number 1st Choice"],
+  //   //   "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
+  //   //   "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
+  //   // };
 
-    emailjs
-      .sendForm(
-        "service_pmvm61d",
-        "template_2n5912c",
-        "#registration",
-        "user_mTmWvnNQd1mBMgl7m6UkZ"
-      )
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          finishRegistration();
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-    const confirmationParams = {
-      name: data.Name,
-      email: data.Email,
-    };
-    console.log("SENDING");
-    emailjs
-      .send(
-        "service_pmvm61d",
-        "template_zl7uesp",
-        confirmationParams,
-        "user_mTmWvnNQd1mBMgl7m6UkZ"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (err) => {
-          console.log("FAILED...", err);
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_pmvm61d",
+  //       "template_2n5912c",
+  //       "#registration",
+  //       "user_mTmWvnNQd1mBMgl7m6UkZ"
+  //     )
+  //     .then(
+  //       function (response) {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //         finishRegistration();
+  //       },
+  //       function (error) {
+  //         console.log("FAILED...", error);
+  //       }
+  //     );
+  //   const confirmationParams = {
+  //     name: data.Name,
+  //     email: data.Email,
+  //   };
+  //   console.log("SENDING");
+  //   emailjs
+  //     .send(
+  //       "service_pmvm61d",
+  //       "template_zl7uesp",
+  //       confirmationParams,
+  //       "user_mTmWvnNQd1mBMgl7m6UkZ"
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //       },
+  //       (err) => {
+  //         console.log("FAILED...", err);
+  //       }
+  //     );
+  // };
 
   return (
     <div className="min-w-full min-h-[90vh] h-90vh">
