@@ -216,6 +216,7 @@ export default function Register() {
                       <input
                         id="name"
                         name="name"
+                        type="text"
                         className="px-3 py-3 relative bg-white bg-white rounded text-sm shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         {...register("Name", { required: true })}
                       />
