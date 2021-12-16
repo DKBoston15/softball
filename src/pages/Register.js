@@ -6,7 +6,6 @@ import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
 
 export default function Register() {
-  // const { EMAILJS_SERVICE_ID, EMAILJS_USER_ID, PAYPAL_CLIENT_ID } = process.env;
   const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
@@ -45,6 +44,7 @@ export default function Register() {
     //   "Jersey Number 2nd Choice": data["Jersey Number 2nd Choice"],
     //   "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
     // };
+
     emailjs
       .sendForm(
         "service_pmvm61d",
@@ -193,6 +193,7 @@ export default function Register() {
                 name="registration"
                 method="post"
                 id="registration"
+                method="POST"
               >
                 <input type="hidden" name="form-name" value="registration" />
                 <div className="">
@@ -204,6 +205,7 @@ export default function Register() {
                       </label>
                       <input
                         id="name"
+                        name="name"
                         className="px-3 py-3 relative bg-white bg-white rounded text-sm shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         {...register("Name", { required: true })}
                       />
@@ -227,6 +229,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="age"
+                        name="age"
                         {...register("Age", { required: true })}
                       />
                     </div>
@@ -265,6 +268,7 @@ export default function Register() {
                     <textarea
                       className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow max-w-3xl"
                       id="medical-conditions"
+                      name="medical-conditions"
                       {...register("Allergies/Medical Conditions", {})}
                     />
                   </div>
@@ -282,6 +286,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="parent-name"
+                        name="parent-name"
                         {...register("Parent/Guardian Name", {
                           required: true,
                         })}
@@ -294,6 +299,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="email"
+                        name="email"
                         {...register("Email", { required: true })}
                       />
                     </div>
@@ -302,6 +308,7 @@ export default function Register() {
                         Phone Number
                       </label>
                       <input
+                        name="phone-number"
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="phone-number"
                         {...register("Phone Number", { required: true })}
@@ -317,6 +324,7 @@ export default function Register() {
                         Extra Contact Name
                       </label>
                       <input
+                        name="additional-contact-name"
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="additional-contact-name"
                         {...register("Additional Contact Name")}
@@ -330,6 +338,7 @@ export default function Register() {
                         Extra Phone Number
                       </label>
                       <input
+                        name="additional-phone-number"
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow"
                         id="additional-phone-number"
                         {...register("Additional Phone Number")}
@@ -443,6 +452,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
                         id="jersery-1-choice"
+                        name="jersery-1-choice"
                         {...register("Jersey Number 1st Choice", {
                           required: true,
                         })}
@@ -455,6 +465,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
                         id="jersery-2-choice"
+                        name="jersery-2-choice"
                         {...register("Jersey Number 2nd Choice", {
                           required: true,
                         })}
@@ -467,6 +478,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-full"
                         id="jersery-3-choice"
+                        name="jersery-3-choice"
                         {...register("Jersey Number 3rd Choice", {
                           required: true,
                         })}
@@ -514,6 +526,7 @@ export default function Register() {
                       <input
                         className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow focus:outline-none focus:ring-2 focus:ring-yellow w-24"
                         id="shoe-size"
+                        name="shoe-size"
                         {...register("Shoe Size", { required: true })}
                       />
                     </div>
