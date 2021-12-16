@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 export default function Sponsors() {
   return (
     <div className="min-w-full min-h-[90vh] h-90vh">
-      <div className="p-32 flex justify-center min-w-full flex-col items-center">
+      <div className="p-12 pt-32 flex justify-center min-w-full flex-col items-center">
         <h1 className="font-bold text-5xl mb-8 mt-10 text-center">Sponsors</h1>
         <hr className="border-4 border-yellow my-10 w-full max-w-6xl" />
         <div className="flex flex-col items-center justify-center">
@@ -63,7 +63,7 @@ export default function Sponsors() {
           <div className="max-w-6xl flex flex-col items-center space-y-12">
             <span className="text-4xl font-bold">Sponsorship Levels</span>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 -ml-2 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $500 ($450 Renewal)
               </div>
               <span className="text-4xl font-semibold">World Series</span>
@@ -88,7 +88,7 @@ export default function Sponsors() {
               </ul>
             </div>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-cadetblue text-white rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-cadetblue text-white rounded-full absolute -top-7 -ml-2 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $400 ($350 Renewal)
               </div>
               <span className="text-4xl font-semibold">All Stars</span>
@@ -113,7 +113,7 @@ export default function Sponsors() {
               </ul>
             </div>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 -ml-2 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $300 ($250 Renewal)
               </div>
               <span className="text-4xl font-semibold">Homerun Derby</span>
@@ -134,7 +134,7 @@ export default function Sponsors() {
               </ul>
             </div>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-cadetblue text-white rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-cadetblue text-white rounded-full absolute -top-7 -ml-2 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $200 ($150 Renewal)
               </div>
               <span className="text-4xl font-semibold">Double Play</span>
@@ -147,7 +147,7 @@ export default function Sponsors() {
               </ul>
             </div>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 -ml-2 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $100
               </div>
               <span className="text-4xl font-semibold">Line Drive</span>
@@ -160,7 +160,7 @@ export default function Sponsors() {
               </ul>
             </div>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-cadetblue text-white rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-cadetblue text-white rounded-full absolute -top-7 -ml-2 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $50
               </div>
               <span className="text-4xl font-semibold">Put Me In Coach</span>
@@ -173,7 +173,7 @@ export default function Sponsors() {
               </ul>
             </div>
             <div className="rounded-xl shadow-xl border-2 border-black text-center text-lg p-4 relative pt-8 w-full">
-              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 text-base md:text-2xl md:w-72 font-semibold flex items-center justify-center">
+              <div className="bg-yellow rounded-full absolute -top-7 h-12 w-48 text-base -ml-2 md:text-2xl md:w-72 font-semibold flex items-center justify-center">
                 $25 And Up
               </div>
               <span className="text-4xl font-semibold">25 And Up</span>
