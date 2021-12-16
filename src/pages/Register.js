@@ -27,15 +27,6 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    let myForm = document.getElementById("registration");
-    let formData = new FormData(myForm);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
     // const templateParams = {
     //   Name: data.Name,
     //   DOB: data.DOB,
@@ -54,22 +45,22 @@ export default function Register() {
     //   "Jersey Number 3rd Choice": data["Jersey Number 3rd Choice"],
     // };
 
-    // emailjs
-    //   .sendForm(
-    //     "service_pmvm61d",
-    //     "template_2n5912c",
-    //     "#registration",
-    //     "user_mTmWvnNQd1mBMgl7m6UkZ"
-    //   )
-    //   .then(
-    //     function (response) {
-    //       console.log("SUCCESS!", response.status, response.text);
-    //       finishRegistration();
-    //     },
-    //     function (error) {
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_6cgp5q4",
+        "template_2n5912c",
+        "#registration",
+        "user_mTmWvnNQd1mBMgl7m6UkZ"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          finishRegistration();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
     const confirmationParams = {
       name: data.Name,
       email: data.Email,
