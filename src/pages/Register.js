@@ -14,11 +14,11 @@ export default function Register() {
     setRegistration(true);
     setOptionChosen(true);
   }
-  // function finishRegistration() {
-  //   setRegistration(false);
-  //   setOptionChosen(false);
-  //   setShowAlert(true);
-  // }
+  function finishRegistration() {
+    setRegistration(false);
+    setOptionChosen(false);
+    setShowAlert(true);
+  }
 
   // Form Control
   const {
@@ -65,7 +65,6 @@ export default function Register() {
       name: data.Name,
       email: data.Email,
     };
-    console.log("SENDING");
     emailjs
       .send(
         "service_pmvm61d",
@@ -76,6 +75,7 @@ export default function Register() {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
+          finishRegistration();
         },
         (err) => {
           console.log("FAILED...", err);
