@@ -193,7 +193,6 @@ export default function Register() {
                 name="registration"
                 method="post"
                 id="registration"
-                method="POST"
               >
                 <input type="hidden" name="form-name" value="registration" />
                 <div className="">
