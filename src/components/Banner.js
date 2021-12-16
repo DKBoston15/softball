@@ -16,7 +16,7 @@ export default function Banner() {
               Early Registration Is Open! <br /> Only $40 until Jan 15th!
             </span>
           </div>
-          <div className="px-4 text-white border-2 border-white py-2 rounded hidden md:block">
+          <div className="px-4 text-white border-2 border-white py-2 rounded hidden md:block hover:scale-105 transform">
             <NavLink to="/register">Learn More</NavLink>
           </div>
         </div>

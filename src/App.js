@@ -7,21 +7,24 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Sponsors from "./pages/Sponsors";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
-    <div className="flex">
+    <div className="flex bg-white">
       <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          {/* <Route path="/about" component={About} /> */}
-          <Route path="/faq" component={FAQ} />
-          {/* <Route path="/contact-us" component={Contact_us} /> */}
-          <Route path="/register" component={Register} />
-          <Route path="/sponsors" component={Sponsors} />
-          <Route path="*" component={NotFound} />
-        </Switch>
+        <ScrollToTop>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            {/* <Route path="/about" component={About} /> */}
+            <Route path="/faq" component={FAQ} />
+            {/* <Route path="/contact-us" component={Contact_us} /> */}
+            <Route path="/register" component={Register} />
+            <Route path="/sponsors" component={Sponsors} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </ScrollToTop>
       </Router>
     </div>
   );

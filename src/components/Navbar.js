@@ -25,17 +25,20 @@ export default function Navbar() {
             {/* <NavLink className="py-4 px-3" to="/about">
               About
             </NavLink> */}
-            <NavLink className="py-4" to="/sponsors">
+            <NavLink className="transform hover:scale-105" to="/sponsors">
               Sponsors
             </NavLink>
-            <NavLink className="py-4 px-3 pr-5" to="/faq">
+            <NavLink
+              className="py-4 px-3 pr-5 transform hover:scale-105"
+              to="/faq"
+            >
               FAQ
             </NavLink>
             {/* <NavLink className="py-4 px-3" to="/contact-us">
               Contact Us
             </NavLink> */}
             <NavLink
-              className="px-4 text-white bg-custom pr-8 py-2 rounded"
+              className="px-4 text-white bg-custom pr-8 py-2 rounded transform hover:scale-105"
               to="/register"
             >
               <span className="mr-4">{">"}</span>Register

@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Footer from "../components/Footer";
 import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
+import softballLoader from "../images/softball-loader.png";
 
 export default function Register() {
   const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function openRegistration() {
     setRegistration(true);
@@ -18,8 +20,8 @@ export default function Register() {
     setRegistration(false);
     setOptionChosen(false);
     setShowAlert(true);
+    setLoading(false);
   }
-
   // Form Control
   const {
     register,
@@ -27,6 +29,7 @@ export default function Register() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    setLoading(true);
     // const templateParams = {
     //   Name: data.Name,
     //   DOB: data.DOB,
@@ -56,6 +59,11 @@ export default function Register() {
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
           finishRegistration();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // for smoothly scrolling
+          });
+          setLoading(false);
         },
         function (error) {
           console.log("FAILED...", error);
@@ -76,6 +84,11 @@ export default function Register() {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           finishRegistration();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // for smoothly scrolling
+          });
+          setLoading(false);
         },
         (err) => {
           console.log("FAILED...", err);
@@ -136,7 +149,7 @@ export default function Register() {
                 </div> */}
                 <button
                   onClick={() => openRegistration()}
-                  className="px-4 text-black bg-yellow pr-8 py-4 rounded w-full"
+                  className="px-4 text-black bg-yellow pr-8 py-4 rounded w-full hover:scale-105 transform"
                   style={{ "max-width": "750px" }}
                 >
                   <div className="font-bold text-lg">
@@ -186,6 +199,16 @@ export default function Register() {
               >
                 Registration Form
               </h1>
+              <button
+                onClick={() =>
+                  onSubmit({
+                    Name: "Dakota Test",
+                    Email: "dakotabrownag@gmail.com",
+                  })
+                }
+              >
+                Test Register
+              </button>
               <br />
               <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -602,11 +625,19 @@ export default function Register() {
                       class="form-checkbox h-5 w-5 ml-4"
                     />
                   </div>
-                  <input
+                  <button
                     type="submit"
-                    value={">   Register"}
-                    className=" px-4 text-white bg-black pr-8 py-2 rounded mt-4 xl:mt-0 cursor-pointer"
-                  />
+                    className="flex justify-center px-4 text-white bg-black w-48 pr-8 py-2 rounded mt-4 xl:mt-0 cursor-pointer hover:scale-105 transform"
+                  >
+                    <div className={` pr-4 ${loading ? "hidden" : "block"}`}>
+                      <span className="mr-8">{">"}</span>
+                      Register
+                    </div>
+                    <img
+                      className={`animate-spin ${loading ? "block" : "hidden"}`}
+                      src={softballLoader}
+                    />
+                  </button>
                 </div>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
