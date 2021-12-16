@@ -8,10 +8,13 @@ import NotFound from "./pages/NotFound";
 import Sponsors from "./pages/Sponsors";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import ReactNotification from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 export default function App() {
   return (
     <div className="flex bg-white">
+      <ReactNotification />
       <Router>
         <ScrollToTop>
           <Navbar />

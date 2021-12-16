@@ -3,11 +3,10 @@ import { useForm } from "react-hook-form";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Footer from "../components/Footer";
 import emailjs from "emailjs-com";
-import Alert from "../components/Alert";
 import softballLoader from "../images/softball-loader.png";
+import { store } from "react-notifications-component";
 
 export default function Register() {
-  const [showAlert, setShowAlert] = useState(false);
   const [optionChosen, setOptionChosen] = useState(false);
   const [registration, setRegistration] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -19,9 +18,9 @@ export default function Register() {
   function finishRegistration() {
     setRegistration(false);
     setOptionChosen(false);
-    setShowAlert(true);
     setLoading(false);
   }
+
   // Form Control
   const {
     register,
@@ -64,6 +63,19 @@ export default function Register() {
             behavior: "smooth", // for smoothly scrolling
           });
           setLoading(false);
+          store.addNotification({
+            title: "Successful Registration",
+            message: "Your player has been registered. Don't forget to pay.",
+            type: "success",
+            insert: "top",
+            container: "top-center",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+              duration: 5000,
+              onScreen: true,
+            },
+          });
         },
         function (error) {
           console.log("FAILED...", error);
@@ -103,11 +115,6 @@ export default function Register() {
           {!optionChosen && (
             <div className="flex flex-col w-full text-center p-10 lg:p-0">
               <div className="text-xl">
-                <Alert
-                  color="green"
-                  showAlert={showAlert}
-                  setShowAlert={setShowAlert}
-                />
                 <h1 className="font-bold text-3xl mb-4 mt-10">
                   Welcome to Spring Ball
                 </h1>
@@ -125,7 +132,8 @@ export default function Register() {
                 </div>
                 <div className="mb-10">
                   If you would like to register in person, you can do so on
-                  January 15th from 12pm-2pm. Location TBD.
+                  January 15th from 12pm-2pm at the Academy Sports in
+                  d'Iberville.
                 </div>
                 <div className="mb-10">
                   To register your player please complete the registration form
