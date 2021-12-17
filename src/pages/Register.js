@@ -14,6 +14,10 @@ export default function Register() {
   function openRegistration() {
     setRegistration(true);
     setOptionChosen(true);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // for smoothly scrolling
+    });
   }
   function finishRegistration() {
     setRegistration(false);
