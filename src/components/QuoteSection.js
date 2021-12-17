@@ -57,7 +57,7 @@ export default function QuoteSection() {
             DGYSL is a 100% non-profit organization ran by volunteers with the
             assistance of our local city officials in d'Iberville. We strive to
             always be an example that our players, parents, and our community
-            can be proud of. The safety of all our children us the utmost
+            can be proud of. The safety of all our children is the utmost
             priority for us at DGYSL. We are eagerly waiting to get started with
             Spring Seasons 2022. Feel free to contact us via email at
             dgysl@yahoo.com with any questions or concerns that you may have.
