@@ -28,6 +28,9 @@ export default function Navbar() {
             <NavLink className="transform hover:scale-105" to="/sponsors">
               Sponsors
             </NavLink>
+            <NavLink className="py-4 transform hover:scale-105" to="/gallery">
+              Gallery
+            </NavLink>
             <NavLink
               className="py-4 px-3 pr-5 transform hover:scale-105"
               to="/faq"
@@ -85,6 +88,13 @@ export default function Navbar() {
             to="/sponsors"
           >
             Sponsors
+          </NavLink>
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 px-4 text-sm hover:bg-gray-200"
+            to="/gallery"
+          >
+            Gallery
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}

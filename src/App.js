@@ -6,6 +6,7 @@ import FAQ from "./pages/FAQ";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Sponsors from "./pages/Sponsors";
+import Gallery from "./pages/Gallery";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import ReactNotification from "react-notifications-component";
@@ -21,6 +22,7 @@ export default function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             {/* <Route path="/about" component={About} /> */}
+            <Route path="/gallery" component={Gallery} />
             <Route path="/faq" component={FAQ} />
             {/* <Route path="/contact-us" component={Contact_us} /> */}
             <Route path="/register" component={Register} />
