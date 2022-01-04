@@ -28,11 +28,14 @@ export default function Navbar() {
             <NavLink className="transform hover:scale-105" to="/sponsors">
               Sponsors
             </NavLink>
-            <NavLink className="py-4 transform hover:scale-105" to="/gallery">
+            <NavLink
+              className="py-4 pl-2 transform hover:scale-105"
+              to="/gallery"
+            >
               Gallery
             </NavLink>
             <NavLink
-              className="py-4 px-3 pr-5 transform hover:scale-105"
+              className="py-4 pl-2 pr-5 transform hover:scale-105"
               to="/faq"
             >
               FAQ

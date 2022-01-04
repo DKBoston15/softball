@@ -27,7 +27,7 @@ export default function GalleryPage() {
     {
       src: "images/YellowTeam2.jpg",
       width: 6,
-      height: 2,
+      height: 3,
     },
     {
       src: "images/YellowField.jpeg",
@@ -45,14 +45,9 @@ export default function GalleryPage() {
       height: 2,
     },
     {
-      src: "images/YellowField4.jpg",
-      width: 8,
-      height: 4,
-    },
-    {
       src: "images/YellowPair.jpeg",
       width: 10,
-      height: 9,
+      height: 4,
     },
   ];
   return (
